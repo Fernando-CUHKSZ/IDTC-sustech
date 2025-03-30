@@ -1,0 +1,33 @@
+🚀 开始处理 X 光片，来源: G:\IDTC-Sustech\2025IDTC\Xray_with_redbox
+🔍 处理: image_2.png
+✅ 结果已保存: G:\IDTC-Sustech\2025IDTC\Detected_Defects\detected_image_2.png, 发现缺陷数: 1
+🔍 处理: image_3.png
+✅ 结果已保存: G:\IDTC-Sustech\2025IDTC\Detected_Defects\detected_image_3.png, 发现缺陷数: 1
+🔍 处理: image_4.png
+✅ 结果已保存: G:\IDTC-Sustech\2025IDTC\Detected_Defects\detected_image_4.png, 发现缺陷数: 1
+🔍 处理: image_5.png
+✅ 结果已保存: G:\IDTC-Sustech\2025IDTC\Detected_Defects\detected_image_5.png, 发现缺陷数: 1
+🔍 处理: image_6.png
+✅ 结果已保存: G:\IDTC-Sustech\2025IDTC\Detected_Defects\detected_image_6.png, 发现缺陷数: 1
+🔍 处理: image_7.png
+✅ 结果已保存: G:\IDTC-Sustech\2025IDTC\Detected_Defects\detected_image_7.png, 发现缺陷数: 3
+🔍 处理: image_8.png
+✅ 结果已保存: G:\IDTC-Sustech\2025IDTC\Detected_Defects\detected_image_8.png, 发现缺陷数: 2
+🔍 处理: image_9.png
+✅ 结果已保存: G:\IDTC-Sustech\2025IDTC\Detected_Defects\detected_image_9.png, 发现缺陷数: 1
+🎉 `Xray_with_redbox/` 缺陷检测完成！
+
+🚀 开始分析 `Xray_no_redbox/` 目录...
+🎉 `Xray_no_redbox/` 分析完成！
+
+📊 缺陷分析报告 📊
+🔍 总共检测到 11 处缺陷
+📋 每张图像缺陷统计:
+  - image_2.png: 1 处缺陷
+  - image_3.png: 1 处缺陷
+  - image_4.png: 1 处缺陷
+  - image_5.png: 1 处缺陷
+  - image_6.png: 1 处缺陷
+  - image_7.png: 3 处缺陷
+  - image_8.png: 2 处缺陷
+  - image_9.png: 1 处缺陷
