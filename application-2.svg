@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f5f8fc" />
+  
+  <!-- 航空发动机叶片示意图 -->
+  <path d="M150,40 C180,50 200,90 190,160 L110,160 C100,90 120,50 150,40 Z" fill="#aaa" stroke="#666" stroke-width="2" />
+  
+  <!-- 轮廓线 -->
+  <path d="M150,60 C170,70 180,90 175,140" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="3" />
+  <path d="M150,60 C130,70 120,90 125,140" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="3" />
+  
+  <!-- 缺陷示意 -->
+  <circle cx="160" cy="80" r="3" fill="red" />
+  <circle cx="140" cy="100" r="2" fill="red" />
+  <circle cx="150" cy="120" r="4" fill="red" />
+  <path d="M135,90 L145,100" stroke="red" stroke-width="2" />
+  
+  <!-- 检测指示 -->
+  <circle cx="160" cy="80" r="8" fill="none" stroke="#0066cc" stroke-width="1" stroke-dasharray="2" />
+  <circle cx="140" cy="100" r="6" fill="none" stroke="#0066cc" stroke-width="1" stroke-dasharray="2" />
+  <circle cx="150" cy="120" r="10" fill="none" stroke="#0066cc" stroke-width="1" stroke-dasharray="2" />
+  <rect x="130" y="85" width="20" height="20" fill="none" stroke="#0066cc" stroke-width="1" stroke-dasharray="2" />
+  
+  <!-- 标题 -->
+  <rect x="80" y="30" width="140" height="25" rx="5" ry="5" fill="#0066cc" />
+  <text x="150" y="48" font-family="'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">航空航天铸件</text>
+</svg> 

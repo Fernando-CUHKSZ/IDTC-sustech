@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f5f8fc" />
+  
+  <!-- 汽车发动机缸体示意图 -->
+  <rect x="50" y="70" width="200" height="80" rx="10" ry="10" fill="#aaa" stroke="#666" stroke-width="2" />
+  
+  <!-- 缸孔 -->
+  <circle cx="80" cy="110" r="15" fill="#444" stroke="#333" stroke-width="1" />
+  <circle cx="120" cy="110" r="15" fill="#444" stroke="#333" stroke-width="1" />
+  <circle cx="160" cy="110" r="15" fill="#444" stroke="#333" stroke-width="1" />
+  <circle cx="200" cy="110" r="15" fill="#444" stroke="#333" stroke-width="1" />
+  <circle cx="240" cy="110" r="15" fill="#444" stroke="#333" stroke-width="1" />
+  
+  <!-- 缺陷示意 -->
+  <circle cx="80" cy="100" r="3" fill="red" />
+  <circle cx="125" cy="115" r="2" fill="red" />
+  <circle cx="165" cy="105" r="4" fill="red" />
+  <path d="M235,115 L245,105" stroke="red" stroke-width="2" />
+  
+  <!-- 检测指示 -->
+  <circle cx="80" cy="100" r="8" fill="none" stroke="#0066cc" stroke-width="1" stroke-dasharray="2" />
+  <circle cx="125" cy="115" r="6" fill="none" stroke="#0066cc" stroke-width="1" stroke-dasharray="2" />
+  <circle cx="165" cy="105" r="10" fill="none" stroke="#0066cc" stroke-width="1" stroke-dasharray="2" />
+  <rect x="230" y="100" width="20" height="20" fill="none" stroke="#0066cc" stroke-width="1" stroke-dasharray="2" />
+  
+  <!-- 标题 -->
+  <rect x="80" y="30" width="140" height="25" rx="5" ry="5" fill="#0066cc" />
+  <text x="150" y="48" font-family="'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">汽车零部件制造</text>
+</svg> 

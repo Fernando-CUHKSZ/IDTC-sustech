@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+    <!-- 背景 -->
+    <rect width="800" height="400" fill="#f5f8fc" rx="10" ry="10"/>
+    
+    <!-- 标题 -->
+    <text x="400" y="30" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" text-anchor="middle" font-weight="bold" fill="#0066cc">多模态 Mask R-CNN 网络结构</text>
+    
+    <!-- 输入层 -->
+    <g>
+        <rect x="50" y="80" width="100" height="80" rx="5" ry="5" fill="#d5e8d4" stroke="#82b366" stroke-width="2"/>
+        <text x="100" y="110" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">X光图像</text>
+        <text x="100" y="130" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">输入</text>
+    </g>
+    
+    <g>
+        <rect x="50" y="180" width="100" height="80" rx="5" ry="5" fill="#d5e8d4" stroke="#82b366" stroke-width="2"/>
+        <text x="100" y="210" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">声发射数据</text>
+        <text x="100" y="230" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">输入</text>
+    </g>
+    
+    <g>
+        <rect x="50" y="280" width="100" height="80" rx="5" ry="5" fill="#d5e8d4" stroke="#82b366" stroke-width="2"/>
+        <text x="100" y="310" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">工艺参数</text>
+        <text x="100" y="330" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">输入</text>
+    </g>
+    
+    <!-- 骨干网络 -->
+    <g>
+        <rect x="200" y="80" width="100" height="80" rx="5" ry="5" fill="#dae8fc" stroke="#6c8ebf" stroke-width="2"/>
+        <text x="250" y="110" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">ResNet</text>
+        <text x="250" y="130" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">骨干网络</text>
+    </g>
+    
+    <g>
+        <rect x="200" y="180" width="100" height="80" rx="5" ry="5" fill="#dae8fc" stroke="#6c8ebf" stroke-width="2"/>
+        <text x="250" y="210" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">1D-CNN</text>
+        <text x="250" y="230" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">特征提取</text>
+    </g>
+    
+    <g>
+        <rect x="200" y="280" width="100" height="80" rx="5" ry="5" fill="#dae8fc" stroke="#6c8ebf" stroke-width="2"/>
+        <text x="250" y="310" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">归一化</text>
+        <text x="250" y="330" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">处理</text>
+    </g>
+    
+    <!-- 特征金字塔网络 -->
+    <g>
+        <rect x="350" y="80" width="100" height="80" rx="5" ry="5" fill="#e1d5e7" stroke="#9673a6" stroke-width="2"/>
+        <text x="400" y="110" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">FPN</text>
+        <text x="400" y="130" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">特征金字塔</text>
+    </g>
+    
+    <!-- 区域提议网络 -->
+    <g>
+        <rect x="500" y="80" width="100" height="80" rx="5" ry="5" fill="#ffe6cc" stroke="#d79b00" stroke-width="2"/>
+        <text x="550" y="110" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">RPN</text>
+        <text x="550" y="130" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">区域提议</text>
+    </g>
+    
+    <!-- 融合模块 -->
+    <g>
+        <rect x="400" y="200" width="100" height="80" rx="5" ry="5" fill="#fff2cc" stroke="#d6b656" stroke-width="2"/>
+        <text x="450" y="230" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">多模态</text>
+        <text x="450" y="250" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">特征融合</text>
+    </g>
+    
+    <!-- ROI Align -->
+    <g>
+        <rect x="550" y="200" width="100" height="80" rx="5" ry="5" fill="#f8cecc" stroke="#b85450" stroke-width="2"/>
+        <text x="600" y="230" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">ROI Align</text>
+        <text x="600" y="250" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">特征对齐</text>
+    </g>
+    
+    <!-- 输出分支 -->
+    <g>
+        <rect x="650" y="140" width="100" height="60" rx="5" ry="5" fill="#d5e8d4" stroke="#82b366" stroke-width="2"/>
+        <text x="700" y="175" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">分类分支</text>
+    </g>
+    
+    <g>
+        <rect x="650" y="210" width="100" height="60" rx="5" ry="5" fill="#d5e8d4" stroke="#82b366" stroke-width="2"/>
+        <text x="700" y="245" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">边界框分支</text>
+    </g>
+    
+    <g>
+        <rect x="650" y="280" width="100" height="60" rx="5" ry="5" fill="#d5e8d4" stroke="#82b366" stroke-width="2"/>
+        <text x="700" y="315" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">掩码分支</text>
+    </g>
+    
+    <!-- 连接线 -->
+    <!-- 输入到特征提取 -->
+    <line x1="150" y1="120" x2="200" y2="120" stroke="#666" stroke-width="2"/>
+    <line x1="150" y1="220" x2="200" y2="220" stroke="#666" stroke-width="2"/>
+    <line x1="150" y1="320" x2="200" y2="320" stroke="#666" stroke-width="2"/>
+    
+    <!-- 特征提取到后续处理 -->
+    <line x1="300" y1="120" x2="350" y2="120" stroke="#666" stroke-width="2"/>
+    <line x1="400" y1="120" x2="500" y2="120" stroke="#666" stroke-width="2"/>
+    
+    <!-- 连接到融合模块 -->
+    <line x1="300" y1="220" x2="400" y2="240" stroke="#666" stroke-width="2"/>
+    <line x1="300" y1="320" x2="400" y2="250" stroke="#666" stroke-width="2"/>
+    <line x1="550" y1="160" x2="450" y2="200" stroke="#666" stroke-width="2"/>
+    
+    <!-- 融合到ROI -->
+    <line x1="500" y1="240" x2="550" y2="240" stroke="#666" stroke-width="2"/>
+    
+    <!-- ROI到分支 -->
+    <line x1="650" y1="220" x2="650" y2="170" stroke="#666" stroke-width="2"/>
+    <line x1="650" y1="240" x2="650" y2="240" stroke="#666" stroke-width="2"/>
+    <line x1="650" y1="260" x2="650" y2="310" stroke="#666" stroke-width="2"/>
+    
+    <!-- 箭头 -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+        </marker>
+    </defs>
+    
+    <g transform="translate(300, 365)">
+        <rect x="0" y="0" width="200" height="25" rx="5" ry="5" fill="#fff" stroke="#ccc"/>
+        <text x="100" y="18" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12" text-anchor="middle" fill="#666">@IDTC2025</text>
+    </g>
+</svg> 

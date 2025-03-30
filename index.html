@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多模态Mask R-CNN | 铸件缺陷智能检测系统</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/sustech-logo.png" alt="IDTC-南方科技大学 Logo">
+                <h1>多模态Mask R-CNN</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#overview">方案概述</a></li>
+                    <li><a href="#features">核心亮点</a></li>
+                    <li><a href="#technology">技术原理</a></li>
+                    <li><a href="#visualization">3D可视化</a></li>
+                    <li><a href="#application">应用场景</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>基于多模态Mask R-CNN的<br>铸件气孔缺陷智能检测系统</h2>
+                <p>融合X光图像、声发射数据与工艺参数的深度学习解决方案</p>
+                <div class="cta-buttons">
+                    <a href="#technology" class="btn primary">了解技术</a>
+                    <a href="#contact" class="btn secondary">申请演示</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div id="three-d-model"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="overview">
+        <div class="container">
+            <h2 class="section-title">方案概述</h2>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p>铸件生产中的孔隙缺陷严重影响产品的力学性能和可靠性，而传统的检测方法往往费时且易受人为因素的干扰。我们基于深度学习的多模态Mask R-CNN技术，实现了铸件气孔缺陷的高精度检测、精确定位与智能分析。</p>
+                    <p>通过融合X光图像、声发射数据和关键工艺参数三种不同模态数据，我们的系统能够全面提升铸件气孔缺陷检测的性能与鲁棒性，有效克服单一模态方法的局限性。</p>
+                    <h3>核心优势</h3>
+                    <ul>
+                        <li>检测精度提升40%，误检率降低35%</li>
+                        <li>深入理解缺陷成因，提供预防性建议</li>
+                        <li>适应多种铸件材料与工艺条件</li>
+                        <li>实时3D可视化，直观呈现缺陷分布</li>
+                    </ul>
+                </div>
+                <div class="overview-image">
+                    <img src="images/overview.svg" alt="方案概述">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">核心亮点</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icon-multimodal.svg" alt="多模态融合">
+                    </div>
+                    <h3>多模态数据融合</h3>
+                    <p>融合X光图像、声发射数据与工艺参数，实现信息互补，提升检测能力。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icon-3d.svg" alt="3D可视化">
+                    </div>
+                    <h3>3D缺陷可视化</h3>
+                    <p>将气孔缺陷在三维空间精准还原，直观展示缺陷分布与特征。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icon-ai.svg" alt="深度学习">
+                    </div>
+                    <h3>先进深度学习</h3>
+                    <p>基于Mask R-CNN架构，实现像素级精确分割与分类。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icon-analysis.svg" alt="智能分析">
+                    </div>
+                    <h3>缺陷智能分析</h3>
+                    <p>自动分析缺陷类型、大小、分布，提供成因及优化建议。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technology" class="technology">
+        <div class="container">
+            <h2 class="section-title">技术原理</h2>
+            <div class="technology-content">
+                <div class="technology-diagram">
+                    <img src="images/mask-rcnn-diagram.svg" alt="Mask R-CNN架构图">
+                </div>
+                <div class="technology-explanation">
+                    <h3>多模态Mask R-CNN网络结构</h3>
+                    <p>我们的多模态Mask R-CNN网络结构有效融合来自不同数据源的信息，以全面提升铸件气孔缺陷检测的性能与鲁棒性。主要包括：</p>
+                    <ul>
+                        <li><strong>X光图像处理流程</strong>：通过ResNet骨干网络、特征金字塔网络（FPN）、区域提议网络（RPN）及ROI Align等标准模块实现特征提取与实例分割</li>
+                        <li><strong>声发射数据处理</strong>：利用一维卷积神经网络（1D-CNN）或循环神经网络（RNN）提取声发射信号的时域特征</li>
+                        <li><strong>工艺参数处理</strong>：归一化处理后的工艺参数数据（浇注温度、模具温度、冷却速率等）与图像和声发射信号特征进行融合</li>
+                        <li><strong>多模态融合模块</strong>：采用ROI级融合策略，将不同模态的ROI特征向量拼接，输入到由全连接层构成的融合模块</li>
+                        <li><strong>输出预测分支</strong>：融合后的特征导入分类、边界框回归和掩码预测分支，实现气孔类别、位置与形状的联合预测</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="visualization" class="visualization">
+        <div class="container">
+            <h2 class="section-title">3D 缺陷可视化</h2>
+            <p class="section-description">
+                通过先进的3D可视化技术，直观展示铸件缺陷检测结果，帮助工程师精确定位和分析缺陷。
+            </p>
+            
+            <div class="visualization-content">
+                <!-- 左侧控制面板 -->
+                <div class="visualization-controls">
+                    <div class="control-group">
+                        <h3>样本选择</h3>
+                        <select id="sample-select" class="form-select">
+                            <option value="detected_image_2">样本 #1</option>
+                            <option value="detected_image_3">样本 #2</option>
+                            <option value="detected_image_4">样本 #3</option>
+                            <option value="detected_image_5">样本 #4</option>
+                            <option value="detected_image_6">样本 #5</option>
+                            <option value="detected_image_7">样本 #6</option>
+                            <option value="detected_image_8">样本 #7</option>
+                            <option value="detected_image_9">样本 #8</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <h3>缺陷类型</h3>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="defect-type" value="气孔" checked> 气孔
+                            </label>
+                            <label>
+                                <input type="checkbox" name="defect-type" value="夹杂" checked> 夹杂
+                            </label>
+                            <label>
+                                <input type="checkbox" name="defect-type" value="裂纹" checked> 裂纹
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <h3>尺寸范围</h3>
+                        <div class="size-filter">
+                            <input type="range" id="size-range" min="0" max="10" step="0.5" value="3">
+                            <div class="range-values">
+                                <span id="size-value">最小尺寸: 3mm</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <h3>显示模式</h3>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="display-mode" value="normal" checked> 正常视图
+                            </label>
+                            <label>
+                                <input type="radio" name="display-mode" value="cross-section"> 截面视图
+                            </label>
+                            <label>
+                                <input type="radio" name="display-mode" value="heatmap"> 热力图
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 中间主显示区 -->
+                <div class="visualization-main">
+                    <div class="main-display">
+                        <img id="main-image" src="./2025IDTC/Detected_Defects/detected_image_2.png" alt="缺陷检测结果"
+                            onerror="this.src='./images/placeholder-defect.svg'">
+                    </div>
+                    
+                    <!-- 缩略图预览 -->
+                    <div class="thumbnails-container">
+                        <div class="thumbnails-scroll">
+                            <div class="thumbnail active" data-image="detected_image_2">
+                                <img src="./2025IDTC/Detected_Defects/detected_image_2.png" alt="样本 #1" 
+                                    onerror="this.src='./images/placeholder-defect.svg'">
+                            </div>
+                            <div class="thumbnail" data-image="detected_image_2">
+                                <img src="./2025IDTC/Detected_Defects/detected_image_2.png" alt="样本 #2" 
+                                    onerror="this.src='./images/placeholder-defect.svg'">
+                            </div>
+                            <div class="thumbnail" data-image="detected_image_3">
+                                <img src="./2025IDTC/Detected_Defects/detected_image_3.png" alt="样本 #3" 
+                                    onerror="this.src='./images/placeholder-defect.svg'">
+                            </div>
+                            <div class="thumbnail" data-image="detected_image_4">
+                                <img src="./2025IDTC/Detected_Defects/detected_image_4.png" alt="样本 #4" 
+                                    onerror="this.src='./images/placeholder-defect.svg'">
+                            </div>
+                            <div class="thumbnail" data-image="detected_image_5">
+                                <img src="./2025IDTC/Detected_Defects/detected_image_5.png" alt="样本 #5" 
+                                    onerror="this.src='./images/placeholder-defect.svg'">
+                            </div>
+                            <div class="thumbnail" data-image="detected_image_6">
+                                <img src="./2025IDTC/Detected_Defects/detected_image_6.png" alt="样本 #6" 
+                                    onerror="this.src='./images/placeholder-defect.svg'">
+                            </div>
+                            <div class="thumbnail" data-image="detected_image_7">
+                                <img src="./2025IDTC/Detected_Defects/detected_image_7.png" alt="样本 #7" 
+                                    onerror="this.src='./images/placeholder-defect.svg'">
+                            </div>
+                            <div class="thumbnail" data-image="detected_image_8">
+                                <img src="./2025IDTC/Detected_Defects/detected_image_8.png" alt="样本 #8" 
+                                    onerror="this.src='./images/placeholder-defect.svg'">
+                            </div>
+                            <div class="thumbnail" data-image="detected_image_9">
+                                <img src="./2025IDTC/Detected_Defects/detected_image_9.png" alt="样本 #9" 
+                                    onerror="this.src='./images/placeholder-defect.svg'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 右侧信息面板 -->
+                <div class="visualization-info">
+                    <div class="defect-details">
+                        <h3>缺陷详情</h3>
+                        <div class="defect-info-card">
+                            <div class="info-item">
+                                <span class="info-label">样本编号:</span>
+                                <span class="info-value" id="info-sample-id">样本 #1</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">缺陷总数:</span>
+                                <span class="info-value" id="info-defect-count">3</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">主要缺陷类型:</span>
+                                <span class="info-value" id="info-primary-defect">气孔</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">最大缺陷尺寸:</span>
+                                <span class="info-value" id="info-max-size">4.2mm</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">检测时间:</span>
+                                <span class="info-value" id="info-detection-time">2025-05-12</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="defect-statistics">
+                        <h3>缺陷统计</h3>
+                        <div class="chart-container">
+                            <canvas id="defect-type-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 缺陷趋势分析 -->
+            <div class="defect-trends">
+                <h3 class="sub-section-title">缺陷趋势分析</h3>
+                <div class="trends-charts">
+                    <div class="chart-container">
+                        <canvas id="defect-trend-chart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="defect-size-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="application" class="application">
+        <div class="container">
+            <h2 class="section-title">应用场景</h2>
+            <div class="application-grid">
+                <div class="application-card">
+                    <img src="images/application-1.svg" alt="汽车零部件">
+                    <div class="application-info">
+                        <h3>汽车零部件制造</h3>
+                        <p>应用于发动机缸体、缸盖、转向节等关键安全部件的质量检测，保障汽车安全性能。</p>
+                    </div>
+                </div>
+                <div class="application-card">
+                    <img src="images/application-2.svg" alt="航空航天">
+                    <div class="application-info">
+                        <h3>航空航天铸件</h3>
+                        <p>用于航空发动机叶片、结构件等高精密铸件的无损检测，确保飞行安全。</p>
+                    </div>
+                </div>
+                <div class="application-card">
+                    <img src="images/application-3.svg" alt="医疗器械">
+                    <div class="application-info">
+                        <h3>医疗器械制造</h3>
+                        <p>应用于人工关节、医疗植入物等精密医疗器械的缺陷检测，保障患者安全。</p>
+                    </div>
+                </div>
+                <div class="application-card">
+                    <img src="images/application-4.svg" alt="能源装备">
+                    <div class="application-info">
+                        <h3>能源装备制造</h3>
+                        <p>用于核电、水电、风电等能源设备关键部件的质量控制，提升设备可靠性。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <h4>联系我们</h4>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <p>联系电话</p>
+                            <p><a href="tel:13260290853">132-6029-0853</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">✉️</span>
+                            <p>联系邮箱</p>
+                            <p><a href="mailto:zhengxc@sustech.edu.cn">zhengxc@sustech.edu.cn</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">🌐</span>
+                            <p>项目组网址</p>
+                            <p><a href="https://www.sustech.edu.cn/zh/faculties/zhengxiaochen.html" target="_blank">https://www.sustech.edu.cn/zh/faculties/zhengxiaochen.html</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">🏢</span>
+                            <p>项目组地址</p>
+                            <p>广东省深圳市南山区学苑大道1088号慧园系统设计与智能制造学院6楼</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <img src="联系方式.gif" alt="联系方式二维码" class="contact-qrcode">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/sustech-logo.png" alt="IDTC-南方科技大学 Logo">
+                    <p>© 2025 IDTC-南方科技大学. 保留所有权利</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>产品</h4>
+                        <ul>
+                            <li><a href="#">缺陷检测系统</a></li>
+                            <li><a href="#">3D可视化平台</a></li>
+                            <li><a href="#">工艺优化系统</a></li>
+                            <li><a href="#">云端分析服务</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>资源</h4>
+                        <ul>
+                            <li><a href="#">技术白皮书</a></li>
+                            <li><a href="#">应用案例</a></li>
+                            <li><a href="#">研究论文</a></li>
+                            <li><a href="#">行业标准</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>关于我们</h4>
+                        <ul>
+                            <li><a href="#">项目组介绍</a></li>
+                            <li><a href="#">研发团队</a></li>
+                            <li><a href="#">合作伙伴</a></li>
+                            <li><a href="#">加入我们</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

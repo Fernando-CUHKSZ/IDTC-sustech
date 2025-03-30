@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f5f8fc" />
+  
+  <!-- 人工关节示意图 -->
+  <path d="M110,50 C100,70 100,100 110,120 L150,120 C160,100 160,70 150,50 Z" fill="#eee" stroke="#ccc" stroke-width="2" />
+  
+  <path d="M130,120 L130,160 L150,170 L170,160 L170,120" fill="#ddd" stroke="#ccc" stroke-width="2" />
+  <ellipse cx="150" cy="120" rx="20" ry="8" fill="#ddd" stroke="#ccc" stroke-width="2" />
+  
+  <!-- 缺陷示意 -->
+  <circle cx="120" cy="70" r="3" fill="red" />
+  <circle cx="140" cy="90" r="2" fill="red" />
+  <circle cx="150" cy="140" r="4" fill="red" />
+  <path d="M160,100 L170,110" stroke="red" stroke-width="2" />
+  
+  <!-- 检测指示 -->
+  <circle cx="120" cy="70" r="8" fill="none" stroke="#0066cc" stroke-width="1" stroke-dasharray="2" />
+  <circle cx="140" cy="90" r="6" fill="none" stroke="#0066cc" stroke-width="1" stroke-dasharray="2" />
+  <circle cx="150" cy="140" r="10" fill="none" stroke="#0066cc" stroke-width="1" stroke-dasharray="2" />
+  <rect x="155" y="95" width="20" height="20" fill="none" stroke="#0066cc" stroke-width="1" stroke-dasharray="2" />
+  
+  <!-- X光视图效果 -->
+  <rect x="190" y="50" width="60" height="120" rx="5" ry="5" fill="#444" />
+  <path d="M200,60 C195,80 195,110 200,130 L220,130 C225,110 225,80 220,60 Z" fill="#ddd" stroke="none" />
+  <path d="M210,130 L210,150 L220,155 L230,150 L230,130" fill="#bbb" stroke="none" />
+  <ellipse cx="220" cy="130" rx="10" ry="4" fill="#bbb" stroke="none" />
+  <circle cx="215" cy="80" r="2" fill="white" />
+  <circle cx="220" cy="145" r="3" fill="white" />
+  
+  <!-- 标题 -->
+  <rect x="80" y="30" width="140" height="25" rx="5" ry="5" fill="#0066cc" />
+  <text x="150" y="48" font-family="'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">医疗器械制造</text>
+</svg> 

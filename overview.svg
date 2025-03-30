@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#f5f8fc" rx="10" ry="10" />
+  
+  <!-- 流程示意图 -->
+  <!-- 输入数据 -->
+  <g>
+    <rect x="50" y="80" width="120" height="70" rx="5" ry="5" fill="#d5e8d4" stroke="#82b366" stroke-width="2" />
+    <text x="110" y="115" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">X光图像</text>
+    <path d="M50,105 L170,105" stroke="#82b366" stroke-width="1" />
+    <image x="65" y="120" width="90" height="20" href="#" preserveAspectRatio="none" />
+  </g>
+  
+  <g>
+    <rect x="50" y="170" width="120" height="70" rx="5" ry="5" fill="#d5e8d4" stroke="#82b366" stroke-width="2" />
+    <text x="110" y="205" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">声发射数据</text>
+    <path d="M50,195 L170,195" stroke="#82b366" stroke-width="1" />
+    <path d="M70,220 L80,215 L90,225 L100,210 L110,220 L120,215 L130,220 L140,210 L150,225" fill="none" stroke="#333" stroke-width="1.5" />
+  </g>
+  
+  <g>
+    <rect x="50" y="260" width="120" height="70" rx="5" ry="5" fill="#d5e8d4" stroke="#82b366" stroke-width="2" />
+    <text x="110" y="295" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">工艺参数</text>
+    <path d="M50,285 L170,285" stroke="#82b366" stroke-width="1" />
+    <text x="110" y="315" font-family="monospace" font-size="10" text-anchor="middle" fill="#333">T=750℃, P=60MPa</text>
+  </g>
+  
+  <!-- 箭头 -->
+  <g>
+    <path d="M170,115 L200,115" stroke="#333" stroke-width="2" />
+    <polygon points="200,115 195,110 195,120" fill="#333" />
+    
+    <path d="M170,205 L200,175" stroke="#333" stroke-width="2" />
+    <polygon points="200,175 193,177 197,182" fill="#333" />
+    
+    <path d="M170,295 L200,235" stroke="#333" stroke-width="2" />
+    <polygon points="200,235 193,239 199,242" fill="#333" />
+  </g>
+  
+  <!-- 处理模块 -->
+  <g>
+    <rect x="200" y="80" width="120" height="70" rx="5" ry="5" fill="#dae8fc" stroke="#6c8ebf" stroke-width="2" />
+    <text x="260" y="115" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">图像处理</text>
+    <text x="260" y="135" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12" text-anchor="middle" fill="#333">ResNet+FPN</text>
+  </g>
+  
+  <g>
+    <rect x="200" y="170" width="120" height="70" rx="5" ry="5" fill="#dae8fc" stroke="#6c8ebf" stroke-width="2" />
+    <text x="260" y="205" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">信号处理</text>
+    <text x="260" y="225" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12" text-anchor="middle" fill="#333">1D-CNN</text>
+  </g>
+  
+  <g>
+    <rect x="200" y="260" width="120" height="70" rx="5" ry="5" fill="#dae8fc" stroke="#6c8ebf" stroke-width="2" />
+    <text x="260" y="295" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">参数分析</text>
+    <text x="260" y="315" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12" text-anchor="middle" fill="#333">归一化处理</text>
+  </g>
+  
+  <!-- 箭头 -->
+  <g>
+    <path d="M320,115 L350,175" stroke="#333" stroke-width="2" />
+    <polygon points="350,175 347,169 343,175" fill="#333" />
+    
+    <path d="M320,205 L350,205" stroke="#333" stroke-width="2" />
+    <polygon points="350,205 345,200 345,210" fill="#333" />
+    
+    <path d="M320,295 L350,235" stroke="#333" stroke-width="2" />
+    <polygon points="350,235 344,239 350,243" fill="#333" />
+  </g>
+  
+  <!-- 融合模块 -->
+  <g>
+    <rect x="350" y="170" width="120" height="70" rx="5" ry="5" fill="#fff2cc" stroke="#d6b656" stroke-width="2" />
+    <text x="410" y="195" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">特征融合</text>
+    <text x="410" y="215" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12" text-anchor="middle" fill="#333">多模态ROI特征</text>
+    
+    <circle cx="380" cy="205" r="10" fill="#d5e8d4" fill-opacity="0.5" />
+    <circle cx="400" cy="205" r="10" fill="#dae8fc" fill-opacity="0.5" />
+    <circle cx="420" cy="205" r="10" fill="#f8cecc" fill-opacity="0.5" />
+    <path d="M380,205 L420,205" stroke="#333" stroke-width="1" stroke-dasharray="2" />
+  </g>
+  
+  <!-- 箭头 -->
+  <g>
+    <path d="M470,205 L500,205" stroke="#333" stroke-width="2" />
+    <polygon points="500,205 495,200 495,210" fill="#333" />
+  </g>
+  
+  <!-- Mask R-CNN模块 -->
+  <g>
+    <rect x="500" y="170" width="120" height="70" rx="5" ry="5" fill="#e1d5e7" stroke="#9673a6" stroke-width="2" />
+    <text x="560" y="195" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">Mask R-CNN</text>
+    <text x="560" y="215" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12" text-anchor="middle" fill="#333">检测与分割</text>
+  </g>
+  
+  <!-- 箭头 -->
+  <g>
+    <path d="M620,205 L650,115" stroke="#333" stroke-width="2" />
+    <polygon points="650,115 644,119 650,123" fill="#333" />
+    
+    <path d="M620,205 L650,205" stroke="#333" stroke-width="2" />
+    <polygon points="650,205 645,200 645,210" fill="#333" />
+    
+    <path d="M620,205 L650,295" stroke="#333" stroke-width="2" />
+    <polygon points="650,295 647,289 643,295" fill="#333" />
+  </g>
+  
+  <!-- 输出结果 -->
+  <g>
+    <rect x="650" y="80" width="120" height="70" rx="5" ry="5" fill="#f8cecc" stroke="#b85450" stroke-width="2" />
+    <text x="710" y="115" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">类别预测</text>
+    <text x="710" y="135" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12" text-anchor="middle" fill="#333">气孔类型识别</text>
+  </g>
+  
+  <g>
+    <rect x="650" y="170" width="120" height="70" rx="5" ry="5" fill="#f8cecc" stroke="#b85450" stroke-width="2" />
+    <text x="710" y="205" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">边界框预测</text>
+    <text x="710" y="225" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12" text-anchor="middle" fill="#333">缺陷位置定位</text>
+  </g>
+  
+  <g>
+    <rect x="650" y="260" width="120" height="70" rx="5" ry="5" fill="#f8cecc" stroke="#b85450" stroke-width="2" />
+    <text x="710" y="295" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" text-anchor="middle" fill="#333">掩码预测</text>
+    <text x="710" y="315" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12" text-anchor="middle" fill="#333">像素级精确分割</text>
+  </g>
+  
+  <!-- 标题 -->
+  <text x="400" y="40" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" text-anchor="middle" fill="#0066cc" font-weight="bold">多模态Mask R-CNN气孔缺陷检测流程</text>
+  
+  <!-- IDTC标记 -->
+  <text x="400" y="380" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12" text-anchor="middle" fill="#666">@IDTC2025 多模态铸件缺陷检测</text>
+</svg> 
